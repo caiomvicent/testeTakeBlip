@@ -8,22 +8,19 @@ class SessionController {
 
         for (let i = 0; i < result.data.length; i++) {
 
-            if (result.data[i].language === process.env.LANGUAGE || 'C#') {
+            if (result.data[i].language === 'C#') {
                 if (cont < 5) {
 
-                    resultApi[i] = {
+                    resultApi[cont + 1] = {
                         linguagem: result.data[i].language,
                         tituloCard: result.data[i].name,
                         subTituloCard: result.data[i].description,
                         imagemCard: result.data[i].owner.avatar_url,
-                        created_at: result.data[i].created_at,
-                        updated_at: result.data[i].updated_at
-
+                        created_at: result.data[i].created_at
                     }
                     cont++
                 }
             }
-
         }
 
         resultApi = Object.assign({}, resultApi);

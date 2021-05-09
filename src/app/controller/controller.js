@@ -8,7 +8,7 @@ class SessionController {
 
         for (let i = 0; i < result.data.length; i++) {
 
-            if (result.data[i].language === 'C#') {
+            if (result.data[i].language === process.env.LANGUAGE) {
                 if (cont < 5) {
 
                     resultApi[cont] = {

@@ -8,7 +8,9 @@ class SessionController {
 
         for (let i = 0; i < result.data.length; i++) {
 
+
             if (result.data[i].language === process.env.LANGUAGE || 'C#') {
+
                 if (cont < 5) {
 
                     resultApi[i] = {
@@ -26,7 +28,9 @@ class SessionController {
 
         }
 
+
         resultApi = Object.assign({}, resultApi);
+
 
         if (resultApi) {
             return res.status(200).send(resultApi)

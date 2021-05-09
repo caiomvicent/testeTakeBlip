@@ -23,7 +23,7 @@ class SessionController {
             }
 
         }
-
+        resultApi = Object.assign({}, resultApi);
         if (resultApi) {
             return res.status(200).send(resultApi)
         } else {

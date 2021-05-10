@@ -6,7 +6,7 @@ class SessionController {
         let resultApi = []
         const result = await api
 
-        for (let i = 0; i < result.data.length; i++) {
+        for (let i = 0; i < result.data.length || cont < 5; i++) {
 
             if (result.data[i].language === 'C#') {
                 if (cont < 5) {

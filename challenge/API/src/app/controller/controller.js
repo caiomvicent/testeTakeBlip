@@ -22,7 +22,6 @@ class SessionController {
                 }
             }
         }
-
         resultApi = Object.assign({}, resultApi);
 
         if (resultApi) {
